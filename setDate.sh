@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 usage() { echo "Usage: $0 [-Y Year : <1970+>[-M Month : <1 - 12> ] [-d day <1-31>] [-h hour <0-23> ] [-m minute <0-59>] [-s second <0-59>]" 1>&2; exit 1; }
 
