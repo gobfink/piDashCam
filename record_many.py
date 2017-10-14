@@ -6,10 +6,10 @@ width = 1600
 height = 900
 frameRate = 24
 filePath = '/media/pi/PNY-128G/'
-fileNameFormat = '%Y-%m-%d:%H.h264'
+fileNameFormat = '%Y-%m-%d--%H.h264'
 timeFormat = '%Y-%m-%d %H:%M:%S'
 duration = inf
-delta_record = 0.2
+delta_record = .5
 previewVideo = False
 
 
@@ -28,6 +28,7 @@ with picamera.PiCamera() as camera:
     past_hour=dt.datetime.now().hour
     while (dt.datetime.now() - start).seconds < duration:
         if past_hour != dt.datetime.now().hour:
+            past_hour = dt.datetime.now().hour
             current_time = dt.datetime.now()
             fileName = current_time.strftime(fileNameFormat)
             complete_path = filePath + fileName
