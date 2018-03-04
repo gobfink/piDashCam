@@ -1,3 +1,4 @@
+import os
 import picamera
 import datetime as dt
 from numpy import inf
@@ -36,3 +37,8 @@ with picamera.PiCamera() as camera:
         camera.annotate_text = dt.datetime.now().strftime(timeFormat)
         camera.wait_recording(delta_record)
     camera.stop_recording()
+
+def get_fs_freespace(pathname):
+    "Gets the free space of the filesystem containing pathname"
+    stat = os.statvfs(pathname)
+    return stat.f_bfree*stat.f_bsize
