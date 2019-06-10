@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import picamera
 import datetime as dt
 from numpy import inf
@@ -5,7 +6,7 @@ from numpy import inf
 width = 1600
 height = 900
 frameRate = 24
-filePath = '/media/pi/PNY-128G/'
+filePath = '/media/pi/PICAM-DATA/'
 fileNameFormat = '%Y-%m-%d:%H.h264'
 timeFormat = '%Y-%m-%d %H:%M:%S'
 duration = inf

@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import os
 import picamera
 import datetime as dt
@@ -17,7 +18,7 @@ def get_oldest_file(pathname):
 width = 1600
 height = 900
 frameRate = 24
-filePath = '/media/pi/PNY-128G/data/'
+filePath = '/mnt/PICAM-DATA/data/'
 fileNameFormat = '%Y-%m-%d--%H.h264'
 timeFormat = '%Y-%m-%d %H:%M:%S'
 duration = inf
